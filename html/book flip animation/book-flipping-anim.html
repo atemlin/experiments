@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Flipping Animation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Hind', sans-serif;
+        }
+
+        body {
+            background-color: #383838;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .book {
+            background-color: #fff;
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            perspective: 600px;
+            position: relative;
+        }
+
+        .book::before {
+            content: '';
+            position: absolute;
+            z-index: 5;
+            width: 50%;
+            height: 100%;
+            right: 50%;
+            background-color: #707070;
+            border-radius: 20px 0 0 20px;
+            transform-origin: center right;
+            transform: rotateY(180deg);
+            transition: 0.7s ease all;
+        }
+
+        .book:hover::before {
+            transform: rotateY(0deg);
+        }
+
+        .book .pg {
+            position: absolute;
+            width: 50%;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .book .pg.pg1 {
+            background-color: #ee5f2a;
+            border-radius: 20px 0 0 20px;
+            left: 0;
+        }
+        
+        .book .pg.pg2 {
+            background-color: #30a5da;
+            right: 0;
+            border-radius: 0 20px 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="book">
+            <div class="pg pg1">HTML</div>
+            <div class="pg pg2">CSS</div>
+        </div>
+    </section>
+</body>
+</html>

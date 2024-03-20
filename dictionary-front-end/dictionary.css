@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("stucco-texture-background.jpg"), url("wooden-background1.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: #f19706;
+}
+
+.for-centered-content {
+    background: gray;
+    height: 300px;
+    width: 300px;
+    position: relative;
+  }
+
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+}
+
+.page-layout {
+    border-collapse: collapse;
+    background-color: white; 
+    /*border: 2px outset black; */ 
+    box-shadow: 5px 5px 2px 1px lightsalmon;
+    text-align: left; 
+}
+
+.page-layout th, .page-layout td {
+    border-bottom: 1px solid gray
+}
+
+.page-layout th, .page-layout td {
+    border-left: 1px solid red;
+    
+}
+
+.page-layout th:first-child, .page-layout td:first-child {
+    border-left: none;
+}
+/*
+.page-layout td:last-child {
+    border-right: none;
+}
+*/
+/*
+table { border: none; border-collapse: collapse; }
+table td { border-left: 1px solid #000; }
+table td:first-child { border-left: none; }
+*/
